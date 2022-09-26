@@ -1,0 +1,34 @@
+package Overload;
+
+public class Member {
+
+	private String job;
+	private int age;
+		
+	public Member() {
+		
+	}
+	
+	public Member(int age) {
+		this.age = age;
+	}
+	
+	public Member(String job) {
+		this.job = job;
+	}
+	
+	public Member(String job, int age) {
+		this.job = job;
+		this.age = age;
+	}
+
+	/*public String toString(){    --->소스에서 한번에 생성가능
+	 *  return "Member[ job = " ;		Generate toString	
+	}*/
+
+	@Override
+	public String toString() {
+		return "Member [job=" + job + ", age=" + age + "]";
+	}
+	
+}
